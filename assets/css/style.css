@@ -197,10 +197,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.06);
 transform:translateY(-3px);
 
 }
-
-/* ===========================
-   HERO
-=========================== */
+/* HERO */
 
 .hero{
 
@@ -210,7 +207,9 @@ display:flex;
 
 align-items:center;
 
-padding-top:120px;
+position:relative;
+
+overflow:hidden;
 
 }
 
@@ -222,15 +221,21 @@ grid-template-columns:1fr 1fr;
 
 align-items:center;
 
-gap:80px;
+gap:100px;
 
 }
 
-.hero-tag{
+.hero-left{
+
+z-index:2;
+
+}
+
+.eyebrow{
 
 display:inline-block;
 
-padding:12px 20px;
+padding:12px 22px;
 
 border-radius:999px;
 
@@ -238,51 +243,59 @@ background:white;
 
 box-shadow:var(--shadow);
 
-font-size:13px;
+font-size:12px;
 
-font-weight:600;
+letter-spacing:3px;
 
-letter-spacing:2px;
+font-weight:700;
 
-margin-bottom:30px;
+margin-bottom:28px;
 
 }
 
 .hero h1{
 
-font-size:92px;
+font-size:108px;
 
-line-height:.95;
+line-height:.9;
 
-letter-spacing:-5px;
+letter-spacing:-6px;
 
-margin-bottom:30px;
+margin-bottom:28px;
+
+font-weight:800;
 
 }
 
 .hero p{
 
-max-width:500px;
-
 font-size:22px;
-
-color:var(--text);
 
 line-height:1.7;
 
-margin-bottom:45px;
+color:#666;
+
+max-width:470px;
+
+margin-bottom:50px;
 
 }
 
-.hero-btn{
+.hero-buttons{
 
-display:inline-flex;
+display:flex;
 
-padding:20px 34px;
+gap:18px;
 
-background:var(--black);
+}
+
+.btn-dark{
+
+background:#111;
 
 color:white;
+
+padding:20px 34px;
 
 border-radius:999px;
 
@@ -292,68 +305,142 @@ transition:.35s;
 
 }
 
-.hero-btn:hover{
+.btn-light{
 
-transform:translateY(-5px);
+background:white;
+
+padding:20px 34px;
+
+border-radius:999px;
+
+box-shadow:var(--shadow);
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.btn-dark:hover,
+.btn-light:hover{
+
+transform:translateY(-6px);
 
 }
 
 .hero-right{
 
-height:700px;
+height:760px;
 
 position:relative;
 
 }
 
-.shape{
+.blob{
 
 position:absolute;
 
 border-radius:50%;
 
-box-shadow:0 40px 80px rgba(0,0,0,.12);
+filter:blur(.3px);
+
+box-shadow:0 50px 120px rgba(0,0,0,.12);
+
+animation:float 10s ease-in-out infinite;
 
 }
 
-.shape1{
+.blob1{
 
-width:420px;
+width:430px;
 
-height:420px;
+height:430px;
 
-right:30px;
+background:linear-gradient(180deg,#ffffff,#ececec);
+
+right:80px;
 
 top:80px;
 
-background:linear-gradient(180deg,#ffffff,#e8e8e8);
-
 }
 
-.shape2{
+.blob2{
 
 width:170px;
 
 height:170px;
 
+background:#2979ff;
+
 left:80px;
 
-bottom:100px;
+bottom:120px;
 
-background:linear-gradient(180deg,#2979ff,#4ea1ff);
+animation-delay:1.5s;
 
 }
 
-.shape3{
+.blob3{
 
 width:120px;
 
 height:120px;
 
-right:0;
-
-bottom:40px;
-
 background:white;
 
+right:40px;
+
+bottom:70px;
+
+animation-delay:3s;
+
+}
+
+.ring{
+
+position:absolute;
+
+width:560px;
+
+height:560px;
+
+border:1px solid rgba(0,0,0,.06);
+
+border-radius:50%;
+
+right:10px;
+
+top:20px;
+
+}
+
+.noise{
+
+position:absolute;
+
+inset:0;
+
+opacity:.03;
+
+background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+
+pointer-events:none;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+}
 }
