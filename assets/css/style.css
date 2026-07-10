@@ -1,6 +1,9 @@
 /* ===========================
    VANDALS 2026
 =========================== */
+body{
+    background:red !important;
+}
 
 :root{
 
