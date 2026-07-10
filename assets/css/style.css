@@ -444,3 +444,30 @@ transform:translateY(-25px);
 
 }
 }
+
+/* HEADER SCROLL */
+
+.header{
+
+transition:.45s cubic-bezier(.22,1,.36,1);
+
+}
+
+.header-scroll{
+
+top:10px;
+
+}
+
+.header-scroll .nav{
+
+height:66px;
+
+background:rgba(255,255,255,.92);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.08);
+
+transform:scale(.985);
+
+}
