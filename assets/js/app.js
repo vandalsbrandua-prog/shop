@@ -33,3 +33,5 @@ const observer = new IntersectionObserver((entries)=>{
 });
 
 philosophyItems.forEach(item=>observer.observe(item));
+
+philosophyItems.forEach(item=>observer.observe(item));
