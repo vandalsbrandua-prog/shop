@@ -676,91 +676,41 @@ color:#777;
 font-size:15px;
 
 }
-/* HERO MOVING LINES */
-
-.hero-right{
-
-position:relative;
-
-height:700px;
-
-overflow:hidden;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
+.hero-right {
+    position: relative;
+    overflow: hidden; /* Щоб об'єкти не виходили за межі */
 }
 
-.hero-lines{
-
-position:absolute;
-
-inset:0;
-
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* Чіткість форм, але м'який перехід кольору */
+    opacity: 0.6;
+    animation: floatBlob 15s infinite ease-in-out;
 }
 
-.hero-lines span{
-    position:absolute;
-    left:-35%;
-    width:170%;
-    height:18px;
-    border-radius:999px;
-
-    /* --- Секрет естетики №1: градієнт --- */
-    /* Лінія має колір від прозорого до accent-кольору і знову до прозорого */
-    background: linear-gradient(
-        90deg,
-        rgba(41, 121, 255, 0) 0%,      /* Повністю прозоро */
-        rgba(41, 121, 255, 0.08) 50%,  /* Пік прозорості (дуже слабкий) */
-        rgba(41, 121, 255, 0) 100%     /* Знову прозоро */
-    );
-
-    /* --- Секрет естетики №2: М'якість --- */
-    filter: blur(6px); /* Трохи сильніше розмиття, щоб краї танули */
-
-    animation:moveLine 10s linear infinite;
-    will-change: transform;
+.blob-1 {
+    width: 300px; height: 300px;
+    background: #2979FF; /* Ваш акцентний синій */
+    top: 10%; right: 10%;
 }
 
-/* Анімація залишилася та сама, але тепер вона рухає "примарний" об'єкт */
-@keyframes moveLine{
-    0%{ transform:translateX(-220px); }
-    100%{ transform:translateX(500px); }
+.blob-2 {
+    width: 250px; height: 250px;
+    background: #FF5252; /* М'який червоний для контрасту */
+    bottom: 10%; left: 10%;
+    animation-delay: -5s;
 }
 
-.hero-lines span:nth-child(1){top:12%;animation-delay:0s;}
-.hero-lines span:nth-child(2){top:24%;animation-delay:-1.5s;}
-.hero-lines span:nth-child(3){top:36%;animation-delay:-3s;}
-.hero-lines span:nth-child(4){top:48%;animation-delay:-4.5s;}
-.hero-lines span:nth-child(5){top:60%;animation-delay:-6s;}
-.hero-lines span:nth-child(6){top:72%;animation-delay:-7.5s;}
-.hero-lines span:nth-child(7){top:84%;animation-delay:-9s;}
-
-@keyframes moveLine{
-
-0%{
-
-transform:translateX(-220px);
-
-opacity:.15;
-
+.blob-3 {
+    width: 200px; height: 200px;
+    background: #7C4DFF; /* Фіолетовий */
+    top: 40%; left: 40%;
+    animation-delay: -10s;
 }
 
-50%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateX(500px);
-
-opacity:.15;
-
-}
-
+@keyframes floatBlob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50px, -50px) scale(1.1); }
+    66% { transform: translate(-30px, 40px) scale(0.9); }
 }
