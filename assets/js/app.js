@@ -94,21 +94,17 @@ setInterval(()=>{
 
 },5000);
 
-// ===========================
-// FAQ Accordion
-// ===========================
+document.querySelectorAll(".faq-question").forEach(btn=>{
 
-document.querySelectorAll(".faq-question").forEach(question => {
+    btn.onclick=()=>{
 
-    question.addEventListener("click", () => {
+        const item=btn.parentElement;
 
-        const item = question.parentElement;
+        document.querySelectorAll(".faq-item").forEach(el=>{
 
-        document.querySelectorAll(".faq-item").forEach(faq => {
+            if(el!==item){
 
-            if(faq !== item){
-
-                faq.classList.remove("active");
+                el.classList.remove("active");
 
             }
 
@@ -116,6 +112,6 @@ document.querySelectorAll(".faq-question").forEach(question => {
 
         item.classList.toggle("active");
 
-    });
+    }
 
 });
