@@ -1,179 +1,100 @@
-/* ===========================
-   VANDALS 2026
-=========================== */
+const header=document.querySelector(‘.header’);
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener(‘scroll’,()=>{ if(window.scrollY>40){
+header.classList.add(‘header-scroll’); }else{
+header.classList.remove(‘header-scroll’); } });
 
-    /* ===========================
-       HEADER
-    =========================== */
+const hero=document.querySelector(‘.hero-object’);
 
-    const header = document.querySelector(".header");
+document.addEventListener(‘mousemove’,e=>{ if(!hero) return;
 
-    const updateHeader = () => {
-        header?.classList.toggle("header-scroll", window.scrollY > 30);
-    };
+    const x=(e.clientX/window.innerWidth-.5)*20;
+    const y=(e.clientY/window.innerHeight-.5)*20;
 
-    updateHeader();
-
-    window.addEventListener("scroll", updateHeader);
-
-
-    /* ===========================
-       SMOOTH SCROLL
-    =========================== */
-
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-        link.addEventListener("click", e => {
-
-            const target = document.querySelector(link.getAttribute("href"));
-
-            if (!target) return;
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    });
-
-
-    /* ===========================
-       HERO PARALLAX
-    =========================== */
-
-    const hero = document.querySelector(".hero-right");
-
-    document.addEventListener("mousemove", e => {
-
-        if (!hero) return;
-
-        const x = (e.clientX - window.innerWidth / 2) / 45;
-        const y = (e.clientY - window.innerHeight / 2) / 45;
-
-        hero.style.transform =
-            `translate3d(${x}px, ${y}px, 0)`;
-
-    });
-
-
-    /* ===========================
-       TILT PRODUCTS
-    =========================== */
-
-    document.querySelectorAll(".product").forEach(card => {
-
-        card.addEventListener("mousemove", e => {
-
-            const rect = card.getBoundingClientRect();
-
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const rotateY = ((x / rect.width) - .5) * 12;
-            const rotateX = ((y / rect.height) - .5) * -12;
-
-            card.style.transform =
-                `perspective(900px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)
-                 translateY(-10px)`;
-
-        });
-
-        card.addEventListener("mouseleave", () => {
-
-            card.style.transform =
-                "perspective(900px) rotateX(0) rotateY(0)";
-
-        });
-
-    });
-
-
-    /* ===========================
-       CATEGORY HOVER
-    =========================== */
-
-    document.querySelectorAll(".category-card").forEach(card => {
-
-        card.addEventListener("mouseenter", () => {
-
-            card.style.transform = "translateY(-10px) scale(1.02)";
-
-        });
-
-        card.addEventListener("mouseleave", () => {
-
-            card.style.transform = "";
-
-        });
-
-    });
-
-
-    /* ===========================
-       FADE IN
-    =========================== */
-
-    const observer = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            entry.target.classList.add("show");
-
-        });
-
-    }, {
-        threshold: .15
-    });
-
-
-    document.querySelectorAll(
-        ".hero-left, .category-card, .product, .section-title"
-    ).forEach(el => {
-
-        el.classList.add("hidden");
-
-        observer.observe(el);
-
-    });
-
-
-    /* ===========================
-       BLOBS
-    =========================== */
-
-    const blobs = document.querySelectorAll(".morph-blob");
-
-    let angle = 0;
-
-    function animate() {
-
-        angle += 0.003;
-
-        blobs.forEach((blob, index) => {
-
-            const radius = 18 + index * 8;
-
-            const x = Math.cos(angle + index) * radius;
-            const y = Math.sin(angle + index) * radius;
-
-            blob.style.translate = `${x}px ${y}px`;
-
-        });
-
-        requestAnimationFrame(animate);
-
-    }
-
-    animate();
+    hero.style.transform=
+        `rotateY(${x}deg) rotateX(${-y}deg) translateY(-6px)`;
 
 });
+
+document.querySelectorAll(‘.product-card’).forEach(card=>{
+
+    card.addEventListener('mousemove',e=>{
+
+        const r=card.getBoundingClientRect();
+
+        const x=e.clientX-r.left-r.width/2;
+        const y=e.clientY-r.top-r.height/2;
+
+        card.style.transform=
+            `rotateX(${-y/25}deg) rotateY(${x/25}deg) translateY(-12px)`;
+
+    });
+
+    card.addEventListener('mouseleave',()=>{
+        card.style.transform='';
+    });
+
+});
+
+if(window.gsap){
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('.hero-left>*',{
+        opacity:0,
+        y:80,
+        duration:1,
+        stagger:.15,
+        ease:"power3.out"
+    });
+
+    gsap.from('.hero-object',{
+        opacity:0,
+        scale:.8,
+        rotate:15,
+        duration:1.5,
+        ease:"power4.out"
+    });
+
+    gsap.utils.toArray('.section-title').forEach(el=>{
+
+        gsap.from(el,{
+            scrollTrigger:{
+                trigger:el,
+                start:"top 80%"
+            },
+            opacity:0,
+            y:60,
+            duration:1
+        });
+
+    });
+
+    gsap.utils.toArray('.product-card').forEach(card=>{
+
+        gsap.from(card,{
+            scrollTrigger:{
+                trigger:card,
+                start:"top 90%"
+            },
+            opacity:0,
+            y:80,
+            duration:.8
+        });
+
+    });
+
+    gsap.to('.hero-glow',{
+        scale:1.15,
+        duration:4,
+        repeat:-1,
+        yoyo:true,
+        ease:"sine.inOut"
+    });
+
+}
+
+document.querySelectorAll(‘a[href=“#”]’).forEach(a=>{
+a.addEventListener(‘click’,e=>e.preventDefault()); });
+
+console.log(“VANDALS 2026 Loaded”);
