@@ -1172,165 +1172,104 @@ PHILOSOPHY
 
 
 /* ===========================
-REVIEWS
+TESTIMONIALS
 =========================== */
 
-.reviews{
+.testimonials{
 
-    background:#fff;
+    background:#111;
+    color:#fff;
 
 }
 
 .testimonial-slider{
 
-    overflow:visible;
+    position:relative;
+    overflow:hidden;
+    margin-top:70px;
 
 }
 
-.swiper-slide{
-
-    height:auto;
-
-}
-
-.review-card{
-
-    background:#fafafa;
-
-    border:1px solid var(--line);
-
-    border-radius:36px;
-
-    padding:45px;
-
-    min-height:330px;
+.testimonial-track{
 
     display:flex;
-
-    flex-direction:column;
-
-    justify-content:space-between;
-
-    transition:.45s;
+    transition:.6s ease;
 
 }
 
-.review-card:hover{
+.testimonial{
 
-    transform:translateY(-10px);
-
-    box-shadow:0 30px 80px rgba(0,0,0,.08);
+    min-width:100%;
+    text-align:center;
+    padding:120px 140px;
 
 }
 
 .stars{
 
-    font-size:22px;
-
-    letter-spacing:4px;
-
-    color:#FFC400;
-
-}
-
-.review-card p{
-
-    font-size:28px;
-
-    line-height:1.55;
-
-    letter-spacing:-1px;
-
-    color:#111;
-
-    margin:35px 0;
+    color:#2979FF;
+    font-size:30px;
+    letter-spacing:8px;
+    margin-bottom:40px;
 
 }
 
-.review-user{
+.testimonial p{
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:6px;
-
-}
-
-.review-user strong{
-
-    font-size:18px;
+    font-size:54px;
+    line-height:1.25;
+    font-weight:700;
+    max-width:950px;
+    margin:auto;
 
 }
 
-.review-user span{
+.testimonial h4{
 
+    margin-top:70px;
+    font-size:26px;
+
+}
+
+.testimonial span{
+
+    display:block;
+    margin-top:10px;
     color:#888;
 
 }
 
-.swiper-pagination{
+.slider-btn{
 
-    position:relative;
-
-    margin-top:55px;
-
-}
-
-.swiper-pagination-bullet{
-
-    width:12px;
-
-    height:12px;
-
-    background:#d4d4d4;
-
-    opacity:1;
-
-}
-
-.swiper-pagination-bullet-active{
-
-    background:#2979FF;
-
-}
-
-.swiper-button-prev,
-.swiper-button-next{
-
-    width:58px;
-
-    height:58px;
-
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:70px;
+    height:70px;
+    border:none;
     border-radius:50%;
-
     background:#fff;
-
-    border:1px solid var(--line);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.06);
-
     color:#111;
+    font-size:28px;
+    cursor:pointer;
+    z-index:5;
+    transition:.3s;
 
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after{
+.slider-btn:hover{
 
-    font-size:18px;
-
-    font-weight:700;
+    transform:translateY(-50%) scale(1.08);
 
 }
 
-.swiper-button-prev{
+.prev{
 
-    left:-25px;
+    left:20px;
 
 }
 
-.swiper-button-next{
+.next{
 
-    right:-25px;
-
+    right:20px;
 }
