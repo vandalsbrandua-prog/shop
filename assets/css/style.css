@@ -676,41 +676,37 @@ color:#777;
 font-size:15px;
 
 }
+
+
+
 .hero-right {
     position: relative;
-    overflow: hidden; /* Щоб об'єкти не виходили за межі */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
 }
 
-.blob {
+.art-object {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(80px); /* Чіткість форм, але м'який перехід кольору */
-    opacity: 0.6;
-    animation: floatBlob 15s infinite ease-in-out;
+    backdrop-filter: blur(20px); /* Ефект матового скла */
+    background: rgba(255, 255, 255, 0.1); /* Дуже легка прозорість */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Чіткий контур */
+    border-radius: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
 }
 
-.blob-1 {
-    width: 300px; height: 300px;
-    background: #2979FF; /* Ваш акцентний синій */
-    top: 10%; right: 10%;
+.glass-1 {
+    width: 320px;
+    height: 400px;
+    transform: rotate(-15deg);
+    background: linear-gradient(135deg, rgba(41, 121, 255, 0.2), rgba(255, 255, 255, 0.1));
 }
 
-.blob-2 {
-    width: 250px; height: 250px;
-    background: #FF5252; /* М'який червоний для контрасту */
-    bottom: 10%; left: 10%;
-    animation-delay: -5s;
-}
-
-.blob-3 {
-    width: 200px; height: 200px;
-    background: #7C4DFF; /* Фіолетовий */
-    top: 40%; left: 40%;
-    animation-delay: -10s;
-}
-
-@keyframes floatBlob {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(50px, -50px) scale(1.1); }
-    66% { transform: translate(-30px, 40px) scale(0.9); }
+.glass-2 {
+    width: 280px;
+    height: 320px;
+    transform: rotate(10deg) translate(50px, 50px);
+    background: linear-gradient(135deg, rgba(255, 82, 82, 0.2), rgba(255, 255, 255, 0.1));
 }
