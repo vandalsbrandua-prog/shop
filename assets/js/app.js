@@ -13,3 +13,23 @@ window.addEventListener("scroll",()=>{
     }
 
 });
+
+const philosophyItems = document.querySelectorAll(".philosophy-item");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
+        }
+
+    });
+
+},{
+    threshold:.35
+});
+
+philosophyItems.forEach(item=>observer.observe(item));
