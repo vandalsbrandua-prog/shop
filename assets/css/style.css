@@ -1010,3 +1010,85 @@ FEATURED BANNER
     }
 
 }
+
+/* ===========================
+PHILOSOPHY
+=========================== */
+
+.philosophy{
+
+    padding:180px 0;
+
+    background:#111;
+
+    color:white;
+
+}
+
+.philosophy-item{
+
+    padding:120px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    opacity:.35;
+
+    transform:translateY(80px);
+
+    transition:1s;
+
+}
+
+.philosophy-item.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.philosophy-item:last-child{
+
+    border:none;
+
+}
+
+.philosophy-item span{
+
+    display:block;
+
+    margin-bottom:25px;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    color:#2979ff;
+
+    font-weight:700;
+
+}
+
+.philosophy-item h2{
+
+    font-size:110px;
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+    margin-bottom:35px;
+
+}
+
+.philosophy-item p{
+
+    max-width:540px;
+
+    color:rgba(255,255,255,.7);
+
+    line-height:2;
+
+    font-size:19px;
+
+}
