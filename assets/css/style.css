@@ -1014,33 +1014,28 @@ PHILOSOPHY
 
 .philosophy{
 
-    padding:180px 0;
-
     background:#111;
-
-    color:white;
+    color:#fff;
+    padding:180px 0;
 
 }
 
 .philosophy-item{
 
-    padding:120px 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+
+    gap:80px;
+
+    min-height:720px;
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
     opacity:.35;
-
     transform:translateY(80px);
 
     transition:1s;
-
-}
-
-.philosophy-item.active{
-
-    opacity:1;
-
-    transform:translateY(0);
 
 }
 
@@ -1050,42 +1045,132 @@ PHILOSOPHY
 
 }
 
-.philosophy-item span{
+.philosophy-item.active{
 
-    display:block;
+    opacity:1;
+    transform:translateY(0);
 
-    margin-bottom:25px;
+}
+
+.philosophy-content span{
+
+    display:inline-block;
+
+    color:#2979FF;
 
     letter-spacing:4px;
 
     font-size:13px;
 
-    color:#2979ff;
-
     font-weight:700;
+
+    margin-bottom:25px;
 
 }
 
-.philosophy-item h2{
+.philosophy-content h2{
 
     font-size:110px;
 
-    line-height:.9;
+    line-height:.88;
 
-    letter-spacing:-5px;
+    letter-spacing:-6px;
 
     margin-bottom:35px;
 
 }
 
-.philosophy-item p{
+.philosophy-content p{
 
-    max-width:540px;
+    max-width:520px;
 
-    color:rgba(255,255,255,.7);
+    color:rgba(255,255,255,.72);
 
     line-height:2;
 
-    font-size:19px;
+    font-size:20px;
 
+}
+
+.philosophy-visual{
+
+    position:relative;
+
+    height:650px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.philosophy-circle{
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    background:linear-gradient(180deg,#ffffff,#d9d9d9);
+
+    box-shadow:0 70px 140px rgba(0,0,0,.45);
+
+    animation:float 7s ease-in-out infinite;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.philosophy-circle.blue{
+
+    background:#2979FF;
+
+}
+
+.philosophy-circle.light{
+
+    background:linear-gradient(180deg,#ffffff,#efefef);
+
+}
+
+.philosophy-ring{
+
+    position:absolute;
+
+    width:560px;
+
+    height:560px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.philosophy-word{
+
+    position:absolute;
+
+    font-size:220px;
+
+    font-weight:800;
+
+    letter-spacing:-8px;
+
+    color:#fff;
+
+    opacity:.04;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+}
 }
