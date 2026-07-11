@@ -23,7 +23,9 @@
 
 }
 
-pointer-events: none;
+.noise{
+    pointer-events:none;
+}
 
 *{
 
@@ -443,6 +445,7 @@ transform:translateY(0px);
 transform:translateY(-25px);
 
 }
+}
 
 
 
@@ -557,5 +560,4 @@ FEATURES
     line-height:1.8;
     max-width:340px;
 
-}
 }
