@@ -1273,3 +1273,161 @@ TESTIMONIALS
 
     right:20px;
 }
+/* ===========================
+FAQ
+=========================== */
+
+.faq{
+
+    background:#fff;
+
+}
+
+.faq-list{
+
+    max-width:900px;
+    margin:70px auto 0;
+
+}
+
+.faq-item{
+
+    border-bottom:1px solid #e8e8e8;
+
+    padding:30px 0;
+
+}
+
+.faq-question{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+.faq-question h3{
+
+    font-size:28px;
+
+    font-weight:600;
+
+}
+
+.faq-question span{
+
+    font-size:38px;
+
+    transition:.35s;
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    color:#666;
+
+    line-height:1.9;
+
+    transition:.4s;
+
+    padding-right:50px;
+
+}
+
+.faq-item.active .faq-answer{
+
+    max-height:200px;
+
+    margin-top:20px;
+
+}
+
+.faq-item.active span{
+
+    transform:rotate(45deg);
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+.footer{
+
+    background:#111;
+
+    color:#fff;
+
+    padding:100px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:60px;
+
+}
+
+.footer h4{
+
+    margin-bottom:25px;
+
+    font-size:20px;
+
+}
+
+.footer a{
+
+    display:block;
+
+    margin-bottom:16px;
+
+    color:rgba(255,255,255,.65);
+
+    transition:.3s;
+
+}
+
+.footer a:hover{
+
+    color:#2979FF;
+
+}
+
+.footer-text{
+
+    margin-top:25px;
+
+    color:rgba(255,255,255,.65);
+
+    line-height:1.9;
+
+    max-width:420px;
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:70px;
+
+    padding-top:30px;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.45);
+
+}
