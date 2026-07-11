@@ -1,264 +1,136 @@
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>VANDALS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VANDALS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
 <header class="header">
-
-    <div class="container nav">
-
-        <a href="#" class="logo">
-            VANDALS<span>.</span>
-        </a>
-
-        <nav class="menu">
-
-            <a href="#">Каталог</a>
-            <a href="#">Новинки</a>
-            <a href="#">Акції</a>
-            <a href="#">Контакти</a>
-
-        </nav>
-
-        <div class="actions">
-
-            <button>🔍</button>
-            <button>☰</button>
-
-        </div>
-
+  <div class="container nav">
+    <a class="logo" href="/">VANDALS<span>.</span></a>
+    <nav class="menu" aria-label="Основне меню">
+      <a href="#collections">Collections</a>
+      <a href="#featured">Featured</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <button aria-label="Пошук">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button aria-label="Меню">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
-
+  </div>
 </header>
-  
+
+<main>
+
 <section class="hero">
+<div class="noise"></div>
 
-    <div class="noise"></div>
+<div class="container hero-grid">
 
-    <div class="container hero-grid">
+<div class="hero-left">
+<div class="eyebrow">2026 MARKETPLACE</div>
 
-        <div class="hero-left">
+<h1>Less.<br>But Better.</h1>
 
-            <div class="eyebrow">
-                2026 MARKETPLACE
-            </div>
+<p>Мінімалістичний маркетплейс для сучасних товарів із ретельно підібраною колекцією.</p>
 
-            <h1>
-                Less.
-                <br>
-                But Better.
-            </h1>
-
-            <p>
-                Мінімалістичний маркетплейс
-                для стильних товарів.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#" class="btn-dark">
-                    Каталог
-                </a>
-
-                <a href="#" class="btn-light">
-                    Новинки
-                </a>
-
-            </div>
-
-            <div class="hero-stats">
-
-                <div class="stat">
-                    <h3>50+</h3>
-                    <span>Товарів</span>
-                </div>
-
-                <div class="stat">
-                    <h3>24/7</h3>
-                    <span>Онлайн</span>
-                </div>
-
-                <div class="stat">
-                    <h3>100%</h3>
-                    <span>Перевірені</span>
-                </div>
-
-            </div>
-
-        </div>
-
-<div class="hero-right">
-    <div class="morph-blob blob-1"></div>
-    <div class="morph-blob blob-2"></div>
+<div class="hero-buttons">
+<a href="#featured" class="btn-dark">Каталог</a>
+<a href="#collections" class="btn-light">Колекції</a>
 </div>
 
-    </div>
+<div class="hero-stats">
+<div class="stat"><h3>50+</h3><span>Товарів</span></div>
+<div class="stat"><h3>24/7</h3><span>Online</span></div>
+<div class="stat"><h3>100%</h3><span>Selected</span></div>
+</div>
 
+</div>
+
+<div class="hero-right" aria-hidden="true">
+<div class="morph-blob blob-1"></div>
+<div class="morph-blob blob-2"></div>
+</div>
+
+</div>
 </section>
-  <section class="categories">
 
+<section id="collections" class="categories">
 <div class="container">
-
 <div class="section-title">
-
-<h2>
-
-Collections
-
-</h2>
-
-<p>
-
-Обирай те, що тобі подобається.
-
-</p>
-
+<div>
+<h2>Collections</h2>
+<p>Обирай стиль, який тобі подобається.</p>
+</div>
 </div>
 
 <div class="category-grid">
-
-<div class="category-card">
-
-<div class="number">01</div>
-
-<h3>Tech</h3>
-
-<span>→</span>
-
+<article class="category-card"><div class="number">01</div><h3>Tech</h3><span>→</span></article>
+<article class="category-card"><div class="number">02</div><h3>Home</h3><span>→</span></article>
+<article class="category-card"><div class="number">03</div><h3>Lifestyle</h3><span>→</span></article>
+<article class="category-card"><div class="number">04</div><h3>Accessories</h3><span>→</span></article>
 </div>
-
-<div class="category-card">
-
-<div class="number">02</div>
-
-<h3>Home</h3>
-
-<span>→</span>
-
 </div>
-
-<div class="category-card">
-
-<div class="number">03</div>
-
-<h3>Lifestyle</h3>
-
-<span>→</span>
-
-</div>
-
-<div class="category-card">
-
-<div class="number">04</div>
-
-<h3>Accessories</h3>
-
-<span>→</span>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
-  <section class="featured">
 
+<section id="featured" class="featured">
 <div class="container">
 
 <div class="section-title">
-
-<h2>
-
-Featured
-
-</h2>
-
-<a href="#" class="view-all">
-
-View all →
-
-</a>
-
+<h2>Featured</h2>
+<a class="view-all" href="#">View all →</a>
 </div>
 
 <div class="products">
 
-<div class="product">
+<article class="product">
+<div class="product-image"><div class="glass"></div></div>
+<div class="product-info"><h3>Minimal Lamp</h3><p>₴1 290</p></div>
+</article>
 
-<div class="product-image">
+<article class="product">
+<div class="product-image"><div class="sphere"></div></div>
+<div class="product-info"><h3>Desk Clock</h3><p>₴890</p></div>
+</article>
 
-<div class="glass"></div>
-
-</div>
-
-<div class="product-info">
-
-<h3>Minimal Lamp</h3>
-
-<p>₴1 290</p>
-
-</div>
-
-</div>
-
-<div class="product">
-
-<div class="product-image">
-
-<div class="sphere"></div>
+<article class="product">
+<div class="product-image"><div class="cube"></div></div>
+<div class="product-info"><h3>Wireless Speaker</h3><p>₴2 490</p></div>
+</article>
 
 </div>
-
-<div class="product-info">
-
-<h3>Desk Clock</h3>
-
-<p>₴890</p>
-
 </div>
-
-</div>
-
-<div class="product">
-
-<div class="product-image">
-
-<div class="cube"></div>
-
-</div>
-
-<div class="product-info">
-
-<h3>Wireless Speaker</h3>
-
-<p>₴2 490</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-<script src="assets/js/app.js"></script>
+<section id="about">
+<div class="container">
+<div class="section-title">
+<h2>Designed for minimalists.</h2>
+<p>VANDALS — сучасний каталог продуктів із фокусом на простоту, швидкість та естетику.</p>
+</div>
+</div>
+</section>
 
+</main>
+
+<footer id="contact">
+<div class="container" style="padding:60px 0;text-align:center;">
+<p>© 2026 VANDALS. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="assets/js/app.js"></script>
 </body>
 </html>
