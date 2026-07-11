@@ -23,10 +23,6 @@
 
 }
 
-.noise{
-    pointer-events:none;
-}
-
 *{
 
 margin:0;
@@ -1172,5 +1168,4 @@ PHILOSOPHY
 
     white-space:nowrap;
 
-}
 }
