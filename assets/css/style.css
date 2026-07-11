@@ -1575,3 +1575,325 @@ FOOTER
 }
 
 }
+
+
+
+/* ====================================
+TABLET
+==================================== */
+
+@media (max-width:1024px){
+
+.hero-grid,
+.featured-card,
+.philosophy-item,
+.footer-top{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-right{
+
+    height:500px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+}
+
+.hero{
+
+    padding-top:180px;
+
+}
+
+.section-head{
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:30px;
+
+}
+
+.features-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.products-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.category-card,
+.category-card.large,
+.category-card.wide{
+
+    grid-column:span 12;
+
+}
+
+.footer-links{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+/* ====================================
+MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+.container{
+
+    width:92%;
+
+}
+
+section{
+
+    padding:80px 0;
+
+}
+
+/* Header */
+
+.menu{
+
+    display:none;
+
+}
+
+.nav{
+
+    padding:0 20px;
+    height:66px;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:auto;
+    padding-top:140px;
+
+}
+
+.hero-grid{
+
+    gap:50px;
+
+}
+
+.hero h1{
+
+    font-size:54px;
+    letter-spacing:-3px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn-dark,
+.btn-light{
+
+    width:100%;
+    text-align:center;
+
+}
+
+.hero-right{
+
+    height:340px;
+
+}
+
+.blob1{
+
+    width:220px;
+    height:220px;
+
+}
+
+.ring{
+
+    width:300px;
+    height:300px;
+
+}
+
+/* Titles */
+
+.section-title h2,
+.section-head h2,
+.products-head h2{
+
+    font-size:42px;
+
+}
+
+/* Cards */
+
+.products-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.features-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.feature-card{
+
+    padding:30px;
+
+}
+
+.feature-card h3{
+
+    font-size:26px;
+
+}
+
+/* Banner */
+
+.featured-card{
+
+    padding:40px;
+
+}
+
+.featured-content h2{
+
+    font-size:48px;
+
+}
+
+.featured-image img{
+
+    width:280px;
+
+}
+
+/* Philosophy */
+
+.philosophy{
+
+    padding:100px 0;
+
+}
+
+.philosophy-item{
+
+    min-height:auto;
+    gap:50px;
+
+}
+
+.philosophy-content h2{
+
+    font-size:60px;
+
+}
+
+.philosophy-word{
+
+    font-size:100px;
+
+}
+
+.philosophy-circle{
+
+    width:220px;
+    height:220px;
+
+}
+
+.philosophy-ring{
+
+    width:320px;
+    height:320px;
+
+}
+
+/* Testimonials */
+
+.testimonial{
+
+    padding:40px 30px;
+
+}
+
+.testimonial p{
+
+    font-size:22px;
+
+}
+
+/* FAQ */
+
+.faq-question{
+
+    padding:24px 0;
+
+}
+
+.faq-question h3{
+
+    font-size:18px;
+
+}
+
+/* Footer */
+
+.footer-top{
+
+    gap:50px;
+
+}
+
+.footer-links{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+}
