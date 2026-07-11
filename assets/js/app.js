@@ -36,59 +36,60 @@ philosophyItems.forEach(item=>observer.observe(item));
 
 philosophyItems.forEach(item=>observer.observe(item));
 
-const testimonialSwiper = new Swiper(".testimonial-slider",{
+const track = document.querySelector(".testimonial-track");
 
-    loop:true,
+const slides = document.querySelectorAll(".testimonial");
 
-    centeredSlides:true,
+const next = document.querySelector(".next");
 
-    grabCursor:true,
+const prev = document.querySelector(".prev");
 
-    spaceBetween:30,
+let index = 0;
 
-    speed:700,
+function updateSlider(){
 
-    slidesPerView:1.15,
+    track.style.transform = `translateX(-${index * 100}%)`;
 
-    autoplay:{
+}
 
-        delay:3500,
+next.addEventListener("click",()=>{
 
-        disableOnInteraction:false,
+    index++;
 
-    },
+    if(index>=slides.length){
 
-    pagination:{
-
-        el:".swiper-pagination",
-
-        clickable:true,
-
-    },
-
-    navigation:{
-
-        nextEl:".swiper-button-next",
-
-        prevEl:".swiper-button-prev",
-
-    },
-
-    breakpoints:{
-
-        768:{
-
-            slidesPerView:1.6,
-
-        },
-
-        1200:{
-
-            slidesPerView:2.2,
-
-        }
+        index=0;
 
     }
 
+    updateSlider();
+
 });
+
+prev.addEventListener("click",()=>{
+
+    index--;
+
+    if(index<0){
+
+        index=slides.length-1;
+
+    }
+
+    updateSlider();
+
 });
+
+setInterval(()=>{
+
+    index++;
+
+    if(index>=slides.length){
+
+        index=0;
+
+    }
+
+    updateSlider();
+
+},5000);
