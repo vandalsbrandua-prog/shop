@@ -1649,124 +1649,110 @@ TABLET
 
 
 
-/* ====================================
-MOBILE
-==================================== */
+/* ===================================
+   MOBILE
+=================================== */
 
 @media (max-width:768px){
 
 .container{
-
     width:92%;
-
 }
 
-section{
-
-    padding:80px 0;
-
-}
-
-/* Header */
-
-.menu{
-
-    display:none;
-
-}
+/* HEADER */
 
 .nav{
-
-    padding:0 20px;
-    height:66px;
-
+    height:72px;
+    padding:0 24px;
 }
 
 .logo{
+    font-size:22px;
+}
 
-    font-size:24px;
+.menu{
+    gap:24px;
+}
 
+.menu a{
+    font-size:14px;
+}
+
+.actions{
+    display:none;
 }
 
 /* HERO */
 
-.hero{
-
-    min-height:auto;
-    padding-top:140px;
-
+.hero-grid,
+.featured-card,
+.philosophy-item,
+.section-head,
+.products-head{
+    grid-template-columns:1fr;
+    display:grid;
+    gap:40px;
 }
 
-.hero-grid{
-
-    gap:50px;
-
+.hero{
+    min-height:auto;
+    padding-top:140px;
 }
 
 .hero h1{
-
-    font-size:54px;
+    font-size:58px;
     letter-spacing:-3px;
-
 }
 
 .hero p{
-
     font-size:18px;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-}
-
-.btn-dark,
-.btn-light{
-
-    width:100%;
-    text-align:center;
-
+    line-height:1.7;
 }
 
 .hero-right{
-
-    height:340px;
-
+    height:420px;
 }
 
 .blob1{
+    width:250px;
+    height:250px;
+    right:20px;
+    top:40px;
+}
 
-    width:220px;
-    height:220px;
+.blob2{
+    width:120px;
+    height:120px;
+}
 
+.blob3{
+    width:90px;
+    height:90px;
 }
 
 .ring{
-
-    width:300px;
-    height:300px;
-
+    width:320px;
+    height:320px;
 }
 
-/* Titles */
+/* SECTION TITLES */
 
 .section-title h2,
 .section-head h2,
 .products-head h2{
 
     font-size:42px;
+    letter-spacing:-2px;
 
 }
 
-/* Cards */
+.section-head{
 
-.products-grid{
-
-    grid-template-columns:1fr;
+    gap:20px;
 
 }
+
+/* FEATURES */
 
 .features-grid{
 
@@ -1782,21 +1768,66 @@ section{
 
 .feature-card h3{
 
-    font-size:26px;
+    font-size:28px;
 
 }
 
-/* Banner */
+/* CATEGORIES */
+
+.category-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.category-card,
+.category-card.large,
+.category-card.wide{
+
+    grid-column:auto;
+    min-height:340px;
+
+}
+
+.category-overlay h3{
+
+    font-size:34px;
+
+}
+
+/* PRODUCTS */
+
+.products-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+/* FEATURED */
 
 .featured-card{
 
-    padding:40px;
+    padding:45px 30px;
+    min-height:auto;
 
 }
 
 .featured-content h2{
 
-    font-size:48px;
+    font-size:52px;
+    letter-spacing:-2px;
+
+}
+
+.featured-content p{
+
+    font-size:18px;
+
+}
+
+.featured-image{
+
+    order:-1;
 
 }
 
@@ -1806,7 +1837,7 @@ section{
 
 }
 
-/* Philosophy */
+/* PHILOSOPHY */
 
 .philosophy{
 
@@ -1817,19 +1848,32 @@ section{
 .philosophy-item{
 
     min-height:auto;
-    gap:50px;
+    gap:40px;
 
 }
 
 .philosophy-content h2{
 
-    font-size:60px;
+    font-size:64px;
+    letter-spacing:-3px;
+
+}
+
+.philosophy-content p{
+
+    font-size:18px;
 
 }
 
 .philosophy-word{
 
     font-size:100px;
+
+}
+
+.philosophy-visual{
+
+    height:340px;
 
 }
 
@@ -1847,17 +1891,31 @@ section{
 
 }
 
-/* Testimonials */
+/* TESTIMONIALS */
 
-.testimonial{
+.testimonial-card{
 
-    padding:40px 30px;
+    padding:40px 28px;
 
 }
 
-.testimonial p{
+.testimonial-text{
 
-    font-size:22px;
+    font-size:28px;
+    line-height:1.35;
+
+}
+
+.testimonial-author{
+
+    font-size:24px;
+
+}
+
+.testimonial-nav{
+
+    width:58px;
+    height:58px;
 
 }
 
@@ -1865,34 +1923,37 @@ section{
 
 .faq-question{
 
-    padding:24px 0;
-
-}
-
-.faq-question h3{
-
     font-size:18px;
+    padding:24px;
 
 }
 
-/* Footer */
+.faq-answer{
 
-.footer-top{
-
-    gap:50px;
+    padding:0 24px 24px;
 
 }
 
-.footer-links{
+/* FOOTER */
+
+.footer-grid{
 
     grid-template-columns:1fr;
+    gap:40px;
+
+}
+
+.footer-logo{
+
+    font-size:38px;
 
 }
 
 .footer-bottom{
 
     flex-direction:column;
-    gap:20px;
+    gap:15px;
+    align-items:flex-start;
 
 }
 
