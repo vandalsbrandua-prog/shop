@@ -36,45 +36,59 @@ philosophyItems.forEach(item=>observer.observe(item));
 
 philosophyItems.forEach(item=>observer.observe(item));
 
-const swiper = new Swiper(".testimonial-slider", {
+const testimonialSwiper = new Swiper(".testimonial-slider",{
 
-    slidesPerView: 1.2,
+    loop:true,
 
-    spaceBetween: 30,
+    centeredSlides:true,
 
-    loop: true,
+    grabCursor:true,
 
-    grabCursor: true,
+    spaceBetween:30,
 
-    centeredSlides: true,
+    speed:700,
 
-    speed: 700,
+    slidesPerView:1.15,
 
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
+    autoplay:{
+
+        delay:3500,
+
+        disableOnInteraction:false,
+
     },
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+    pagination:{
+
+        el:".swiper-pagination",
+
+        clickable:true,
+
     },
 
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+    navigation:{
+
+        nextEl:".swiper-button-next",
+
+        prevEl:".swiper-button-prev",
+
     },
 
-    breakpoints: {
+    breakpoints:{
 
-        768: {
-            slidesPerView: 1.5,
+        768:{
+
+            slidesPerView:1.6,
+
         },
 
-        1200: {
-            slidesPerView: 2.2,
+        1200:{
+
+            slidesPerView:2.2,
+
         }
 
     }
 
+});
 });
