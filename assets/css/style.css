@@ -702,15 +702,33 @@ inset:0;
 
 }
 
-.hero-lines span {
-    position: absolute;
-    left: -35%;
-    width: 170%;
-    height: 18px;
-    border-radius: 999px;
-    background: rgba(41, 121, 255, 0.2); /* Використовуйте ваш --accent з прозорістю */
-    filter: blur(5px);
-    animation: moveLine 10s linear infinite;
+.hero-lines span{
+    position:absolute;
+    left:-35%;
+    width:170%;
+    height:18px;
+    border-radius:999px;
+
+    /* --- Секрет естетики №1: градієнт --- */
+    /* Лінія має колір від прозорого до accent-кольору і знову до прозорого */
+    background: linear-gradient(
+        90deg,
+        rgba(41, 121, 255, 0) 0%,      /* Повністю прозоро */
+        rgba(41, 121, 255, 0.08) 50%,  /* Пік прозорості (дуже слабкий) */
+        rgba(41, 121, 255, 0) 100%     /* Знову прозоро */
+    );
+
+    /* --- Секрет естетики №2: М'якість --- */
+    filter: blur(6px); /* Трохи сильніше розмиття, щоб краї танули */
+
+    animation:moveLine 10s linear infinite;
+    will-change: transform;
+}
+
+/* Анімація залишилася та сама, але тепер вона рухає "примарний" об'єкт */
+@keyframes moveLine{
+    0%{ transform:translateX(-220px); }
+    100%{ transform:translateX(500px); }
 }
 
 .hero-lines span:nth-child(1){top:12%;animation-delay:0s;}
