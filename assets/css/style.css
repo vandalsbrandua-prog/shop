@@ -1672,6 +1672,7 @@ TABLET
 
 .menu{
     gap:24px;
+    display:none;
 }
 
 .menu a{
@@ -1679,20 +1680,9 @@ TABLET
 }
 
 .actions{
-    display:none;
+    display:flex;
 }
    
-.testimonial{
-
-padding:50px 30px;
-
-}
-
-.testimonial p{
-
-font-size:24px;
-
-}
 
 /* HERO */
 
@@ -1929,6 +1919,18 @@ font-size:24px;
     width:58px;
     height:58px;
 
+}
+
+.slider-btn{
+    display:none;
+}
+
+.testimonial{
+    padding:60px 30px;
+}
+
+.testimonial p{
+    font-size:24px;
 }
 
 /* FAQ */
