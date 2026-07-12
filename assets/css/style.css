@@ -162,40 +162,8 @@ opacity:.45;
 
 }
 
-.actions{
-
-display:none;
-
-gap:14px;
-
-}
-
-.actions button{
-
-width:44px;
-
-height:44px;
-
-border:none;
-
-border-radius:50%;
-
-background:white;
-
-cursor:pointer;
-
-font-size:18px;
-
-transition:.35s;
-
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-
-}
-
-.actions button:hover{
-
-transform:translateY(-3px);
-
+.burger{
+    display:none;
 }
 /* HERO */
 
@@ -1687,7 +1655,7 @@ TABLET
 
 .burger{
 
-    display:none;
+    display:flex;
 
     width:46px;
     height:46px;
