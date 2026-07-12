@@ -1777,26 +1777,6 @@ TABLET
     cursor:pointer;
 
 }
-
-@media(max-width:768px){
-
-.menu{
-
-display:none;
-
-}
-
-.burger{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-}
-
-}
    
 
 /* HERO */
