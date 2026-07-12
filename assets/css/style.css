@@ -1681,6 +1681,18 @@ TABLET
 .actions{
     display:none;
 }
+   
+.testimonial{
+
+padding:50px 30px;
+
+}
+
+.testimonial p{
+
+font-size:24px;
+
+}
 
 /* HERO */
 
@@ -1931,6 +1943,12 @@ TABLET
 .faq-answer{
 
     padding:0 24px 24px;
+
+}
+
+.faq-title h2{
+
+font-size:56px;
 
 }
 
